@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YourEden — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         max-width: 42rem; margin: 0 auto; padding: 2rem 1.25rem; line-height: 1.6; }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.2rem; margin-top: 2rem; }
+  h3 { font-size: 1.02rem; margin-top: 1.4rem; }
+  .sub { color: #666; margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { border: 1px solid #ddd; padding: .5rem .6rem; text-align: left; vertical-align: top; }
+  th { background: #f7f7f7; }
+  code { background: #f4f4f4; padding: .1rem .35rem; border-radius: 4px; }
+  ul { padding-left: 1.2rem; }
+  a { color: #0b66c3; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #121212; color: #e8e8e8; }
+    .sub { color: #aaa; } th, td { border-color: #333; } th { background: #1c1c1c; }
+    code { background: #222; } a { color: #63b3ff; }
+  }
+</style>
+</head>
+<body>
+<h1>YourEden — Privacy Policy</h1>
+<p class="sub"><strong>Last updated:</strong> 21 September 2026 <strong>Applies to:</strong> YourEden Android app (<code>com.readysteadygo2006.youreden</code>)</p>
+<h2>Who we are</h2>
+<p>YourEden is operated by <strong>readysteadygo2006</strong>. Privacy contact: <strong>home.paul.grant@gmail.com</strong></p>
+<h2>What we collect</h2>
+<h3>Account information</h3>
+<p>When you create an account we collect your <strong>email address</strong> and a password. Authentication is handled by <strong>AWS Cognito</strong>; we never store your password.</p>
+<h3>Growing system data</h3>
+<p>When you add a controller, the app and the device send us:</p>
+<ul><li>Sensor readings (temperature, humidity, water level, nutrient values)</li><li>Device configuration, schedules and power/pump state</li><li>System, tray and plant records you create, including journal entries and notes</li></ul>
+<p>This data is transmitted from your controller to <strong>AWS IoT Core</strong> and stored in AWS services (IoT Device Shadow, DynamoDB, S3) in the <strong>eu-west-2 (London)</strong> region.</p>
+<h3>Device and technical information</h3>
+<ul><li>A <strong>push notification token</strong> (Firebase Cloud Messaging), used only to deliver</li></ul>
+<p>  notifications you have enabled</p>
+<ul><li>Basic app analytics via <strong>AWS Pinpoint</strong> (app opens, session data)</li><li>Your controller's hardware identifier (MAC address) and local network address</li></ul>
+<p>  during setup</p>
+<h3>Permissions and what they are for</h3>
+<table>
+<tr><th>Permission</th><th>Why</th></tr>
+<tr><td>Bluetooth (scan/connect)</td><td>Find and configure your controller during setup</td></tr>
+<tr><td>Nearby devices / Location (Android 11 and below only)</td><td>Android requires location permission to scan for Bluetooth and Wi-Fi devices. <strong>We never collect, store or share your location.</strong></td></tr>
+<tr><td>Wi-Fi state</td><td>Connect your controller to your home network</td></tr>
+<tr><td>Notifications</td><td>Deliver alerts you have enabled</td></tr>
+</table>
+<h2>What we do NOT collect</h2>
+<ul><li>We do <strong>not</strong> collect your geographic location</li><li>We do <strong>not</strong> sell or rent your data</li><li>We do <strong>not</strong> share your data with advertisers</li><li>We do <strong>not</strong> use third-party tracking or advertising SDKs</li></ul>
+<h2>Who processes your data</h2>
+<p>Your data is processed by <strong>Amazon Web Services</strong> (hosting, authentication, storage, messaging) and <strong>Google Firebase</strong> (push notification delivery only). These providers act on our instructions as data processors.</p>
+<h2>Support access</h2>
+<p>If you ask us for help, we may request temporary access to your growing system data to diagnose the problem. <strong>This only happens with your explicit consent</strong> — you receive a request in the app and must accept it before any access is granted. You can decline, and access is limited to your system configuration and sensor data. We never see your password.</p>
+<h2>How long we keep it</h2>
+<p>We keep your data while your account is active. When you delete your account, we delete it as described below.</p>
+<h2>Deleting your account and data</h2>
+<p>You can delete your account at any time:</p>
+<p><strong>In the app:</strong> Settings → <strong>Delete Account</strong></p>
+<p><strong>On the web:</strong> <a href="https://readysteadygo2006.github.io/youreden/delete-account">https://readysteadygo2006.github.io/youreden/delete-account</a></p>
+<p>Deleting your account permanently removes:</p>
+<ul><li>Your login credentials (AWS Cognito)</li><li>All systems, devices, sensor history, plants and journal entries</li><li>Your device certificates and cloud device records</li><li>All files stored for your account</li></ul>
+<p>This is immediate and irreversible. We retain no backup copies except where required by law.</p>
+<h2>Security</h2>
+<p>Data in transit to our cloud services is encrypted with TLS. Device provisioning over Bluetooth is encrypted at the application layer. Access to your data requires authentication.</p>
+<h2>Children</h2>
+<p>YourEden is not directed at children under 13 and we do not knowingly collect data from them.</p>
+<h2>Changes</h2>
+<p>We will update the date at the top of this policy when it changes. Material changes will be notified in the app.</p>
+<h2>Contact</h2>
+<p>Questions or requests: <strong>home.paul.grant@gmail.com</strong></p>
+
+<p style="margin-top:2rem"><a href="../delete-account/">Delete your account</a></p>
+</body>
+</html>
