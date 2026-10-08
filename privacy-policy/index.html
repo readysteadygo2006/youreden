@@ -27,7 +27,7 @@
 </head>
 <body>
 <h1>YourEden — Privacy Policy</h1>
-<p class="sub"><strong>Last updated:</strong> 21 September 2026 <strong>Applies to:</strong> YourEden Android app (<code>com.readysteadygo2006.youreden</code>)</p>
+<p class="sub"><strong>Last updated:</strong> 8 October 2026 <strong>Applies to:</strong> the YourEden app for Android (<code>com.youreden.app</code>) and iOS</p>
 <h2>Who we are</h2>
 <p>YourEden is operated by <strong>readysteadygo2006</strong>. Privacy contact: <strong>home.paul.grant@gmail.com</strong></p>
 <h2>What we collect</h2>
@@ -37,6 +37,11 @@
 <p>When you add a controller, the app and the device send us:</p>
 <ul><li>Sensor readings (temperature, humidity, water level, nutrient values)</li><li>Device configuration, schedules and power/pump state</li><li>System, tray and plant records you create, including journal entries and notes</li></ul>
 <p>This data is transmitted from your controller to <strong>AWS IoT Core</strong> and stored in AWS services (IoT Device Shadow, DynamoDB, S3) in the <strong>eu-west-2 (London)</strong> region.</p>
+<h3>Sharing your account with other people</h3>
+<p>An account owner can invite other people by email to help look after their systems, as an <strong>Admin</strong> or a <strong>Member</strong>. To do this we store:</p>
+<ul><li>the email address you enter for the person you invite</li><li>the role you give them, who sent the invitation, and when</li><li>whether the invitation is pending, accepted, declined or withdrawn</li></ul>
+<p>We send the invitation from a no-reply address using <strong>Amazon SES</strong>. The email contains only a link to accept; it expires after 7 days, and expired invitations are deleted automatically.</p>
+<p>People who accept can see and control the owner's systems according to their role (some actions, such as adding systems or changing device settings, stay with the owner), and may receive the system's notifications. The owner or an admin can remove someone's access at any time, and anyone can leave an account they were invited to.</p>
 <h3>Device and technical information</h3>
 <ul><li>A <strong>push notification token</strong> (Firebase Cloud Messaging), used only to deliver</li></ul>
 <p>  notifications you have enabled</p>
@@ -53,17 +58,18 @@
 <h2>What we do NOT collect</h2>
 <ul><li>We do <strong>not</strong> collect your geographic location</li><li>We do <strong>not</strong> sell or rent your data</li><li>We do <strong>not</strong> share your data with advertisers</li><li>We do <strong>not</strong> use third-party tracking or advertising SDKs</li></ul>
 <h2>Who processes your data</h2>
-<p>Your data is processed by <strong>Amazon Web Services</strong> (hosting, authentication, storage, messaging) and <strong>Google Firebase</strong> (push notification delivery only). These providers act on our instructions as data processors.</p>
+<p>Your data is processed by <strong>Amazon Web Services</strong> (hosting, authentication, storage, messaging and email delivery) and <strong>Google Firebase</strong> (push notification delivery only). These providers act on our instructions as data processors.</p>
 <h2>Support access</h2>
-<p>If you ask us for help, we may request temporary access to your growing system data to diagnose the problem. <strong>This only happens with your explicit consent</strong> — you receive a request in the app and must accept it before any access is granted. You can decline, and access is limited to your system configuration and sensor data. We never see your password.</p>
+<p>If you ask us for help, we may request temporary access to your growing system data to diagnose the problem. <strong>This only happens with your explicit consent</strong> — you receive a request in the app and must accept it before any access is granted. You can decline, and access is limited to the data in your account (systems, devices, sensor readings, plants and journals) and is used only to resolve your request. We never see your password.</p>
 <h2>How long we keep it</h2>
 <p>We keep your data while your account is active. When you delete your account, we delete it as described below.</p>
 <h2>Deleting your account and data</h2>
 <p>You can delete your account at any time:</p>
-<p><strong>In the app:</strong> Settings → <strong>Delete Account</strong></p>
+<p><strong>In the app:</strong> Settings → <strong>Manage account</strong> → <strong>Delete Account</strong></p>
 <p><strong>On the web:</strong> <a href="https://readysteadygo2006.github.io/youreden/delete-account">https://readysteadygo2006.github.io/youreden/delete-account</a></p>
 <p>Deleting your account permanently removes:</p>
-<ul><li>Your login credentials (AWS Cognito)</li><li>All systems, devices, sensor history, plants and journal entries</li><li>Your device certificates and cloud device records</li><li>All files stored for your account</li></ul>
+<ul><li>Your login credentials (AWS Cognito)</li><li>All systems, devices, sensor history, plants and journal entries</li><li>Your device certificates and cloud device records</li><li>All files stored for your account</li><li>Any access you have given other people, and invitations you have sent</li></ul>
+<p>If you have access to someone else's account as an Admin or Member, deleting your own account ends that access; their account and data are not affected.</p>
 <p>This is immediate and irreversible. We retain no backup copies except where required by law.</p>
 <h2>Security</h2>
 <p>Data in transit to our cloud services is encrypted with TLS. Device provisioning over Bluetooth is encrypted at the application layer. Access to your data requires authentication.</p>
